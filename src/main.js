@@ -15,6 +15,8 @@ const renderer = new THREE.WebGLRenderer({antialias: true})
 const meshes = {} 
 const lights = {}
 
+const clock = new THREE.Clock()
+
 init()
 
 function init(){
