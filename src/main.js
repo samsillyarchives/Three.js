@@ -4,6 +4,8 @@ import { addDefaultMeshes, addStandardMesh } from './addDefaultMeshes.js'
 import { addLight } from './addLight.js'
 import Model from './model'
 import { manager } from './manager'
+import { HDRI } from './enviornment.js'
+
 
 
 const scene = new THREE.Scene()
@@ -21,6 +23,9 @@ const mixers = []
 
 const clock = new THREE.Clock()
 const loadingManager = manager()
+
+scene.background = HDRI()
+scene.environment = HDRI()
 
 init()
 
